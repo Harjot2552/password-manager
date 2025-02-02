@@ -1,3 +1,11 @@
+function maskPassword(pass) {
+    let str = ""
+    for (let index = 0; index < pass.length; index++) {
+        str += "*"
+    }
+    return str
+}
+
 // Logic to fill the table
 const showPasswords = () => {
     let tb = document.querySelector("table")
