@@ -34,3 +34,27 @@ const showPasswords = () => {
     username.value = ""
     password.value = ""
 }
+
+
+console.log("Working");
+showPasswords()
+document.querySelector(".btn").addEventListener("click", (e) => {
+    e.preventDefault()
+    console.log("Clicked....")
+    console.log(username.value, password.value)
+    let passwords = localStorage.getItem("passwords")
+    console.log(passwords)
+    if (passwords == null) {
+        let json = []
+        json.push({ website: website.value, username: username.value, password: password.value })
+        alert("Password Saved");
+        localStorage.setItem("passwords", JSON.stringify(json))
+    }
+    else {
+        let json = JSON.parse(localStorage.getItem("passwords"))
+        json.push({ website: website.value, username: username.value, password: password.value })
+        alert("Password Saved");
+        localStorage.setItem("passwords", JSON.stringify(json))
+    }
+    showPasswords()
+})
