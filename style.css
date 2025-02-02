@@ -6,3 +6,37 @@
     font-family: 'Noto Sans', sans-serif;
     font-family: 'Poppins', sans-serif;
 }
+
+
+
+nav {
+    background-color: black;
+    color: white;
+    padding: 12px 3px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo{
+    margin: 0 23px;
+    font-weight: 800;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+ul {
+    display: flex;
+    margin: 0 23px;
+    align-items: center;
+}
+
+ul > li {
+    list-style: none;
+    margin: 0 13px;
+    cursor: pointer;
+}
+
+ul > li:hover{
+    color: white;
+
+}
